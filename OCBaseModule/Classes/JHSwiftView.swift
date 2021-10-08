@@ -7,7 +7,11 @@
 
 import UIKit
 
-class JHSwiftView: UIView {
+@objc public class JHSwiftView: UIView {
+    var a: JHAvatarView = JHAvatarView()
+    
+}
 
+@objc public protocol JHSwiftPtotocol: NSObjectProtocol {
     
 }

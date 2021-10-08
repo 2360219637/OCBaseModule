@@ -7,11 +7,12 @@
 //
 
 #import "JHAvatarView.h"
+#import "OCBaseModule-swift.h"
 
 @implementation JHAvatarView
 
 - (void)test {
-    JHAvatarView *v = [JHAvatarView new];
+//    JHSwiftView *v = [[JHSwiftView alloc] init];
 }
 
 @end
