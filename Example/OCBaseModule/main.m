@@ -1,0 +1,17 @@
+//
+//  main.m
+//  OCBaseModule
+//
+//  Created by 2360219637 on 10/08/2021.
+//  Copyright (c) 2021 2360219637. All rights reserved.
+//
+
+@import UIKit;
+#import "JHAppDelegate.h"
+
+int main(int argc, char * argv[])
+{
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([JHAppDelegate class]));
+    }
+}
