@@ -1,0 +1,16 @@
+PODS:
+  - OCBaseModule (0.1.0)
+
+DEPENDENCIES:
+  - OCBaseModule (from `../`)
+
+EXTERNAL SOURCES:
+  OCBaseModule:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  OCBaseModule: 672f1644380609aad30755384d2d11ed5b5e8f69
+
+PODFILE CHECKSUM: dadbe7e2064d0a6b3dd05b550652298799bfafaa
+
+COCOAPODS: 1.8.4

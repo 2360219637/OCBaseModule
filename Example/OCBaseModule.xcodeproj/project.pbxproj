@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		09A9FC1C0DA3AFD5592C727A /* Pods-OCBaseModule_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCBaseModule_Tests.release.xcconfig"; path = "Target Support Files/Pods-OCBaseModule_Tests/Pods-OCBaseModule_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		0CBCA767AEBBAF9744F26E05 /* Pods_OCBaseModule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCBaseModule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		131C5353B84EBB1525728802 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		131C5353B84EBB1525728802 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2DE20827602EF42CAE26393D /* Pods-OCBaseModule_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCBaseModule_Tests.debug.xcconfig"; path = "Target Support Files/Pods-OCBaseModule_Tests/Pods-OCBaseModule_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* OCBaseModule_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCBaseModule_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,12 +60,12 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6C0FBD2309287E36FD3E9219 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6C0FBD2309287E36FD3E9219 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C606C76C29A32EC4AB98D3C6 /* Pods-OCBaseModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCBaseModule_Example.release.xcconfig"; path = "Target Support Files/Pods-OCBaseModule_Example/Pods-OCBaseModule_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CF0B54670C27D5297E56AB54 /* Pods_OCBaseModule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCBaseModule_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFBF699D2CE57CB888330451 /* OCBaseModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = OCBaseModule.podspec; path = ../OCBaseModule.podspec; sourceTree = "<group>"; };
+		CFBF699D2CE57CB888330451 /* OCBaseModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OCBaseModule.podspec; path = ../OCBaseModule.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FD7B871F7E6F8F04099E2E15 /* Pods-OCBaseModule_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCBaseModule_Example.debug.xcconfig"; path = "Target Support Files/Pods-OCBaseModule_Example/Pods-OCBaseModule_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,7 +193,6 @@
 				2DE20827602EF42CAE26393D /* Pods-OCBaseModule_Tests.debug.xcconfig */,
 				09A9FC1C0DA3AFD5592C727A /* Pods-OCBaseModule_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +207,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				AB67C8F1C7E646DE997DF06A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,6 +256,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -295,24 +294,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AB67C8F1C7E646DE997DF06A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OCBaseModule_Example/Pods-OCBaseModule_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/OCBaseModule/OCBaseModule.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCBaseModule.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OCBaseModule_Example/Pods-OCBaseModule_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B77EA22A041343B3CE327D7B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
