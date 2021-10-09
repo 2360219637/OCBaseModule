@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B340510271131C200AD9452 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34050F271131C200AD9452 /* File.swift */; };
 		363031EEBB2D1F19103C7C25 /* Pods_OCBaseModule_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF0B54670C27D5297E56AB54 /* Pods_OCBaseModule_Example.framework */; };
 		5BF39D6C10D5D66E1AE62B20 /* Pods_OCBaseModule_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBCA767AEBBAF9744F26E05 /* Pods_OCBaseModule_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -40,6 +41,8 @@
 		09A9FC1C0DA3AFD5592C727A /* Pods-OCBaseModule_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCBaseModule_Tests.release.xcconfig"; path = "Target Support Files/Pods-OCBaseModule_Tests/Pods-OCBaseModule_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		0CBCA767AEBBAF9744F26E05 /* Pods_OCBaseModule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCBaseModule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		131C5353B84EBB1525728802 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2B34050E271131C100AD9452 /* OCBaseModule_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCBaseModule_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		2B34050F271131C200AD9452 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		2DE20827602EF42CAE26393D /* Pods-OCBaseModule_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCBaseModule_Tests.debug.xcconfig"; path = "Target Support Files/Pods-OCBaseModule_Tests/Pods-OCBaseModule_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* OCBaseModule_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCBaseModule_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,9 +140,11 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* JHViewController.h */,
 				6003F5A6195388D20070C39A /* JHViewController.m */,
+				2B34050F271131C200AD9452 /* File.swift */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				2B34050E271131C100AD9452 /* OCBaseModule_Example-Bridging-Header.h */,
 			);
 			name = "Example for OCBaseModule";
 			path = OCBaseModule;
@@ -246,6 +251,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = 2360219637;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						LastSwiftMigration = 1250;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -346,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* JHAppDelegate.m in Sources */,
+				2B340510271131C200AD9452 /* File.swift in Sources */,
 				6003F5A7195388D20070C39A /* JHViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -475,12 +484,16 @@
 			baseConfigurationReference = FD7B871F7E6F8F04099E2E15 /* Pods-OCBaseModule_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCBaseModule/OCBaseModule-Prefix.pch";
 				INFOPLIST_FILE = "OCBaseModule/OCBaseModule-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OCBaseModule/OCBaseModule_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -491,12 +504,15 @@
 			baseConfigurationReference = C606C76C29A32EC4AB98D3C6 /* Pods-OCBaseModule_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCBaseModule/OCBaseModule-Prefix.pch";
 				INFOPLIST_FILE = "OCBaseModule/OCBaseModule-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OCBaseModule/OCBaseModule_Example-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -506,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2DE20827602EF42CAE26393D /* Pods-OCBaseModule_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -531,6 +548,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09A9FC1C0DA3AFD5592C727A /* Pods-OCBaseModule_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
